@@ -7,7 +7,12 @@ jobs:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
         node_version: [14, 16, 18]
-      # fail-fast: true
+        # fail-fast: true
+        exclude:
+        - os: macos-latest
+          node_version: 14
+        - os: windows-latest
+          node-version: 16
     runs-on: ${{ matrix.os }}
     steps:
       - name: Log Node Version
