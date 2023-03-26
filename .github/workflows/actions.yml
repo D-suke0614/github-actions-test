@@ -1,8 +1,8 @@
 name: Actions Workflow
 on:
   # ブランチを指定して、イベントを設定s流がことができる
-  # pull_request:
-  push:
+  pull_request:
+  # push:
     branches:
       - main
       # - 'feature/*' # matches feature/featA, feature/featB...
